@@ -16,7 +16,7 @@
 <meta property="og:description" content="主要介绍在markdown中公式的编辑规则，另外附上使用LaTex添加公式到Hexo博客里的链接">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-20T09:28:23.000Z">
-<meta property="article:modified_time" content="2020-04-20T14:12:16.865Z">
+<meta property="article:modified_time" content="2020-04-20T16:01:20.033Z">
 <meta property="article:author" content="雪霁初晴">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -205,36 +205,140 @@ var _hmt = _hmt || [];
       </header>
     
     <div align="center" class="post-count">
-      字数：1.1k字 | 预计阅读时长：5分钟
+      字数：1.2k字 | 预计阅读时长：5分钟
     </div> 
     <div class="article-entry" itemprop="articleBody">
       
-        <p>主要介绍在markdown中公式的编辑规则，另外附上使用LaTex添加公式到Hexo博客里的链接<br><a id="more"></a></p>
-<h2 id="1-在hexo中使用LaTex"><a href="#1-在hexo中使用LaTex" class="headerlink" title="1 在hexo中使用LaTex"></a>1 在hexo中使用LaTex</h2><h3 id="1-1-单行中使用"><a href="#1-1-单行中使用" class="headerlink" title="1.1 单行中使用"></a>1.1 单行中使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$[LaTex内容]$  如 $E&#x3D;mc^2$</span><br><span class="line"> &#96;&#96;&#96;   </span><br><span class="line"></span><br><span class="line">显示为$E&#x3D;mc^2$</span><br><span class="line"></span><br><span class="line">### 1.2 多行中使用</span><br></pre></td></tr></table></figure>
+        <p>主要介绍在markdown中公式的编辑规则，另外附上使用LaTex添加公式到Hexo博客里的链接</p>
+<a id="more"></a>
+<h2 id="1-在hexo中使用LaTex"><a href="#1-在hexo中使用LaTex" class="headerlink" title="1 在hexo中使用LaTex"></a>1 在hexo中使用LaTex</h2><h3 id="1-1-单行中使用"><a href="#1-1-单行中使用" class="headerlink" title="1.1 单行中使用"></a>1.1 单行中使用</h3><blockquote>
+<p>\$[LaTex内容]\$  </p>
+</blockquote>
+<p>如 \$E=mc^2\$<br>显示为<br>$E=mc^2$</p>
+<h3 id="1-2-多行中使用"><a href="#1-2-多行中使用" class="headerlink" title="1.2 多行中使用"></a>1.2 多行中使用</h3><blockquote>
+<p>\$\$[LaTex内容]\\\[LaTex内容]\$\$</p>
+</blockquote>
+<p>如 \$\$　\lim_{x \to 2}　\$\$　\$　\lim_{x \to 2}　\$<br>显示为</p>
 <script type="math/tex; mode=display">
-           [LaTex内容]</script><p>如  $$<br>    \begin{vmatrix} 0 &amp; 1 \\1 &amp; 0\end{vmatrix}</p>
-<pre><code>$$
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">显示为</span><br><span class="line">$$</span><br><span class="line"> \begin&#123;vmatrix&#125; 0 &amp; 1 \\1 &amp; 0\end&#123;vmatrix&#125;</span><br><span class="line">$$</span><br><span class="line"></span><br><span class="line">### 1.3 LaTeX内部换行</span><br></pre></td></tr></table></figure>
+ \lim_{x \to 2}</script><p>$\lim_{x \to 2}$</p>
+<h3 id="1-3-LaTeX内部换行"><a href="#1-3-LaTeX内部换行" class="headerlink" title="1.3 LaTeX内部换行"></a>1.3 LaTeX内部换行</h3><blockquote>
+<p>ab\\cd</p>
+</blockquote>
 <script type="math/tex; mode=display">
 \begin{array}{cc}
    ab\\cd
-\end{array}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">   ab\\cd</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br><span class="line">&gt;不知道为什么现在好像采用\\的形式实现公式内的换行需要在矩阵的格式下才可以，之前我看网上的教程里并没有说明一定是要的矩阵中，但是不用矩阵会报错。</span><br><span class="line">### 1.4 LaTex公式与文本之间的间隔</span><br></pre></td></tr></table></figure>
-<p>a \quad b \quad c<br>对比 a quad b quad c<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">显示为$a \quad b \quad c$     </span><br><span class="line">对比 $ a quad b quad c $</span><br><span class="line">### 1.5 LaTex公式编号</span><br><span class="line">需要使用\tag&#123;...&#125;标签产生对应的标号</span><br></pre></td></tr></table></figure><br> I_3=\begin{array}{cc} 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1<br> \end{array}\tag{1.1}<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">显示为</span><br><span class="line">$$</span><br><span class="line"> I_3&#x3D;\begin&#123;array&#125;&#123;cc&#125; 1 &amp; 0 &amp; 0 \\0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1</span><br><span class="line"> \end&#123;array&#125;\tag&#123;1.1&#125;</span><br><span class="line">$$     </span><br><span class="line">---</span><br><span class="line">## 2 常用的数学符号与公式</span><br><span class="line"></span><br><span class="line">### 上下标</span><br></pre></td></tr></table></figure><br>a^2  a_2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">显示为：$ a^2 \ \ a_2 $</span><br><span class="line"></span><br><span class="line">### 方根</span><br><span class="line">平方根（square root）的输入命令为：\sqrt，n 次方根相应地为: \sqrt[n]。方根符号的大小由LaTeX自动加以调整。也可用\surd 仅给出符号。</span><br></pre></td></tr></table></figure><br>\sqrt{x}  \sqrt[3]{x^3}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">显示为 $\sqrt&#123;x&#125;\ \  \sqrt[3]&#123;x^3&#125;$</span><br><span class="line">### 上划线和下划线</span><br><span class="line">命令\overline 和\underline 在表达式的上、下方画出水平线。</span><br></pre></td></tr></table></figure><br>\overline{AB} \ \underline{m+n}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$\begin&#123;array&#125;&#123;cc&#125;\overline&#123;AB&#125; \\ \underline&#123;m+n&#125;\end&#123;array&#125;$</span><br><span class="line">### 向量的表示</span><br><span class="line">向量（Vectors）通常用上方有小箭头（arrow symbols）的变量表示。这可由\vec 得到。另两个命令\overrightarrow 和\overleftarrow在定义从A 到B 的向量时非常有用。</span><br></pre></td></tr></table></figure><br>\vec a \quad \overrightarrow{AB} \quad \overleftarrow{CD}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$\vec a \ \ \quad \overrightarrow&#123;AB&#125; \quad \overleftarrow&#123;CD&#125;$</span><br><span class="line">### 分数</span><br><span class="line">分数（fraction）使用\frac&#123;…&#125;&#123;…&#125; 排版。一般来说，1&#x2F;2 这种形式更受欢迎，因为对于少量的分式，它看起来更好些。对于简单的公式，则直接可以使用\over这种形式。</span><br></pre></td></tr></table></figure><br>\frac{1}{2}<br>1 \over 2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ \frac&#123;1&#125;&#123;2&#125; $</span><br><span class="line">$1 \over 2$</span><br><span class="line">### 积分</span><br><span class="line">积分运算符（integral operator）用\int 来生成。求和运算符（sum operator）由\sum 生成。乘积运算符（product operator）由\prod 生成。上限和下限用^ 和_来生成，类似于上标和下标。</span><br></pre></td></tr></table></figure><br>\sum_{n=1}^\infty \frac{1}{n} \\<br>\int_0^\frac{\pi}{2} sin(\theta) d \theta \\<br>\prod_\epsilon<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">\sum_&#123;n&#x3D;1&#125;^\infty \frac&#123;1&#125;&#123;n&#125; \\</span><br><span class="line">\int_0^\frac&#123;\pi&#125;&#123;2&#125; sin(\theta)d\theta\\ </span><br><span class="line">\prod_\epsilon</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br><span class="line">### 极限</span><br></pre></td></tr></table></figure><br>\lim_{x \to 2}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\lim_&#123;x \to 2&#125;$$</span><br><span class="line">&gt;由于极限符号是两行，所以需要采用$$符号</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">## 3 符号表   </span><br><span class="line">数学模式重音符</span><br></pre></td></tr></table></figure><br>\hat{a}     \grave{a}       \bar{a}     \check{a}<br>\dot{a}     \vec{a}         \tilde{a}   \ddot{a}<br>\widehat{A} \acute{a}       \breve{a}   \widetilde{A}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$$</span><br><span class="line">\hat&#123;a&#125;   \quad  \grave&#123;a&#125;    \quad   \bar&#123;a&#125;  \quad   \check&#123;a&#125; \quad</span><br><span class="line">\dot&#123;a&#125;   \quad  \vec&#123;a&#125;   \quad      \tilde&#123;a&#125;  \quad \ddot&#123;a&#125; \quad</span><br><span class="line">\widehat&#123;A&#125;\quad \acute&#123;a&#125;    \quad   \breve&#123;a&#125;  \quad \widetilde&#123;A&#125;</span><br><span class="line">$$</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">小写希腊字母</span><br></pre></td></tr></table></figure><br>\alpha            \theta        o                 \upsilon \\<br>\beta             \vartheta \pi             \phi \\<br>\gamma             \iota         \varpi         \varphi \\<br>\delta             \kappa         \rho             \chi \\<br>\epsilon         \lambda     \varrho     \psi \\<br>\varepsilon \mu             \sigma         \omega \\<br>\zeta             \nu             \varsigma \\<br>\eta                 \xi             \tau<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">\alpha	\quad		\theta	\quad	o 	\quad			\upsilon \\</span><br><span class="line">\beta 	\quad		\vartheta \quad   \pi 		\quad	\phi \\</span><br><span class="line">\gamma 	\quad		\iota 	\quad	\varpi   	\quad  	\varphi \\</span><br><span class="line">\delta 	\quad		\kappa 	\quad	\rho 	\quad		\chi \\</span><br><span class="line">\epsilon 	\quad	\lambda   \quad  	\varrho   \quad	\psi \\</span><br><span class="line">\varepsilon  \quad   \mu 	\quad		\sigma 	 \quad	\omega \\</span><br><span class="line">\zeta 		\quad	\nu 	\quad		\varsigma \\</span><br><span class="line">\eta 	\quad			\xi 	\quad		\tau</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br><span class="line">---</span><br><span class="line">大写希腊字母</span><br></pre></td></tr></table></figure><br>\Gamma            \Lambda            \Sigma            \Psi    \\<br>\Delta            \Xi                    \Upsilon        \Omega    \\<br>\Theta            \Pi<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">\Gamma		\quad	\Lambda		\quad	\Sigma	\quad		\Psi	\\</span><br><span class="line">\Delta		\quad	\Xi			\quad		\Upsilon	\quad	\Omega	\\</span><br><span class="line">\Theta	\quad		\Pi	</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br><span class="line">---</span><br><span class="line">常用运算关系</span><br></pre></td></tr></table></figure></p>
+\end{array}</script><blockquote>
+<p>不知道为什么现在好像采用\\的形式实现公式内的换行需要在矩阵的格式下才可以，之前我看网上的教程里并没有说明一定是要的矩阵中，但是不用矩阵会报错。</p>
+</blockquote>
+<h3 id="1-4-LaTex公式与文本之间的间隔"><a href="#1-4-LaTex公式与文本之间的间隔" class="headerlink" title="1.4 LaTex公式与文本之间的间隔"></a>1.4 LaTex公式与文本之间的间隔</h3><blockquote>
+<p>a \quad b \quad c<br>对比 a quad b quad c</p>
+</blockquote>
+<p>显示为$a \quad b \quad c$<br>对比 $ a quad b quad c $</p>
+<h3 id="1-5-LaTex公式编号"><a href="#1-5-LaTex公式编号" class="headerlink" title="1.5 LaTex公式编号"></a>1.5 LaTex公式编号</h3><p>需要使用\tag{…}标签产生对应的标号</p>
 <blockquote>
-<p>&lt; = \leg \geq \equive</p>
-<ul>
-<li><ul>
-<li>\pm \mp \times \div<br>\sum \prod \int \oint \Rightarrow \Longrightarrow<br>```<script type="math/tex; mode=display">
+<p>I_3=\begin{array}{cc} 1　0　0 \\\\0　1　0 \\\ 0　0　1　　　\end{array}\tag{1.1}</p>
+</blockquote>
+<p>显示为</p>
+<script type="math/tex; mode=display">
+ I_3=\begin{array}{cc} 1 & 0 & 0 \\0 & 1 & 0 \\ 0 & 0 & 1
+ \end{array}\tag{1.1}</script><hr>
+<h2 id="2-常用的数学符号与公式"><a href="#2-常用的数学符号与公式" class="headerlink" title="2 常用的数学符号与公式"></a>2 常用的数学符号与公式</h2><h3 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h3><blockquote>
+<p>a^2 　a_2</p>
+</blockquote>
+<p>显示为：$ a^2 \quad a_2 $</p>
+<h3 id="方根"><a href="#方根" class="headerlink" title="方根"></a>方根</h3><p>平方根（square root）的输入命令为：\sqrt，n 次方根相应地为: \sqrt[n]。方根符号的大小由LaTeX自动加以调整。也可用\surd 仅给出符号。</p>
+<blockquote>
+<p>\sqrt{x}  \sqrt[3]{x^3}</p>
+</blockquote>
+<p>显示为 $\sqrt{x} \quad \sqrt[3]{x^3}$</p>
+<h3 id="上划线和下划线"><a href="#上划线和下划线" class="headerlink" title="上划线和下划线"></a>上划线和下划线</h3><p>命令\overline 和\underline 在表达式的上、下方画出水平线。</p>
+<blockquote>
+<p>\overline{AB} \ \underline{m+n}</p>
+</blockquote>
+<p>$\begin{array}{cc}\overline{AB} \quad \underline{m+n}\end{array}$</p>
+<h3 id="向量的表示"><a href="#向量的表示" class="headerlink" title="向量的表示"></a>向量的表示</h3><p>向量（Vectors）通常用上方有小箭头（arrow symbols）的变量表示。这可由\vec 得到。另两个命令\overrightarrow 和\overleftarrow在定义从A 到B 的向量时非常有用。</p>
+<blockquote>
+<p>\vec a　\overrightarrow{AB} 　 \overleftarrow{CD}</p>
+</blockquote>
+<p>$\vec a   \quad \overrightarrow{AB} \quad \overleftarrow{CD}$</p>
+<h3 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h3><p>分数（fraction）使用\frac{…}{…} 排版。一般来说，1/2 这种形式更受欢迎，因为对于少量的分式，它看起来更好些。对于简单的公式，则直接可以使用\over这种形式。</p>
+<blockquote>
+<p>\frac{1}{2}<br>1 \over 2</p>
+</blockquote>
+<p>$ \frac{1}{2} $<br>$1 \over 2$</p>
+<h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><p>积分运算符（integral operator）用\int 来生成。求和运算符（sum operator）由\sum 生成。乘积运算符（product operator）由\prod 生成。上限和下限用^ 和_来生成，类似于上标和下标。</p>
+<blockquote>
+<p>\sum_{n=1}^\infty \frac{1}{n} \\<br>\int_0^\frac{\pi}{2} sin(\theta) d \theta \\<br>\prod_\epsilon</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\begin{array}{cc}
+\sum_{n=1}^\infty \frac{1}{n} \\
+\int_0^\frac{\pi}{2} sin(\theta)d\theta\\
+\prod_\epsilon
+\end{array}</script><h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><blockquote>
+<p>\lim_{x \to 2}</p>
+</blockquote>
+<script type="math/tex; mode=display">\lim_{x \to 2}</script><blockquote>
+<p>由于极限符号是两行，所以需要采用$$符号</p>
+</blockquote>
+<hr>
+<h2 id="3-符号表"><a href="#3-符号表" class="headerlink" title="3 符号表"></a>3 符号表</h2><p>数学模式重音符</p>
+<blockquote>
+<p>\hat{a}　\grave{a}　\bar{a}　\check{a}<br>\dot{a} 　\vec{a} 　\tilde{a} 　\ddot{a}<br>\widehat{A} 　\acute{a}　\breve{a}　\widetilde{A}</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\hat{a}   \quad  \grave{a}    \quad   \bar{a}  \quad   \check{a} \quad
+\dot{a}   \quad  \vec{a}   \quad      \tilde{a}  \quad \ddot{a} \quad
+\widehat{A}\quad \acute{a}    \quad   \breve{a}  \quad \widetilde{A}</script><hr>
+<p>小写希腊字母</p>
+<blockquote>
+<p>\alpha　　\theta　　o 　　　\upsilon<br>\beta 　　\vartheta　 \pi 　　　\phi<br>\gamma 　\iota 　　　\varpi 　\varphi<br>\delta 　　　\kappa 　　\rho 　　\chi<br>\epsilon 　　\lambda 　\varrho 　\psi<br>\varepsilon 　\mu 　　　\sigma 　\omega<br>\zeta 　\nu 　\varsigma<br>\eta 　\xi 　\tau</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\begin{array}{cc}
+\alpha \quad \theta \quad o \quad \upsilon \\
+\beta  \quad \vartheta \quad   \pi \quad \phi \\
+\gamma \quad \iota \quad \varpi \quad  \varphi \\
+\delta \quad \kappa \quad \rho  \quad \chi \\
+\epsilon \quad \lambda   \quad  \varrho   \quad \psi \\
+\varepsilon  \quad   \mu \quad \sigma  \quad \omega \\
+\zeta  \quad \nu  \quad \varsigma \\
+\eta  \quad \xi  \quad \tau
+\end{array}</script><hr>
+<p>大写希腊字母</p>
+<blockquote>
+<p>\Gamma 　\Lambda 　\Sigma 　\Psi<br>\Delta　 \Xi　 \Upsilon 　\Omega<br>\Theta 　\Pi</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\begin{array}{cc}
+\Gamma \quad \Lambda \quad \Sigma \quad \Psi \\
+\Delta \quad \Xi \quad \Upsilon \quad \Omega \\
+\Theta \quad \Pi
+\end{array}</script><hr>
+<p>常用运算关系</p>
+<blockquote>
+<p>> 　\&lt;　 \= 　\leg　 \geq　 \equive<br>+ 　- 　\pm　 \mp 　\times　 \div<br>\sum 　\prod 　\int 　\oint 　\Rightarrow　 \Longrightarrow</p>
+</blockquote>
+<script type="math/tex; mode=display">
 \begin{array}{cc}
 \ > \quad < \quad  = \quad \leq \quad \geq \quad \neq \quad +\\
 \quad- \quad \pm \quad \mp \quad  \times \quad \div \quad \odot \quad \otimes \\
 \sum \quad \prod \quad \int \quad \oint \quad \Rightarrow \quad \Longrightarrow
-\end{array}</script></li>
-</ul>
-</li>
-</ul>
+\end{array}</script><h2 id="参考内容和Hexo中添加LaTex链接"><a href="#参考内容和Hexo中添加LaTex链接" class="headerlink" title="参考内容和Hexo中添加LaTex链接"></a>参考内容和Hexo中添加LaTex链接</h2><blockquote>
+<p>Hexo中的LaTeX基本教程<a href="https://www.borgor.cn/categories/Reading-Writing/LaTeX/" target="_blank" rel="noopener">https://www.borgor.cn/categories/Reading-Writing/LaTeX/</a><br>使用vscode的markdown插件绘图写文档<a href="https://www.jianshu.com/p/a9bd83b768d5" target="_blank" rel="noopener">https://www.jianshu.com/p/a9bd83b768d5</a><br>使用LaTex添加公式到Hexo博客里<a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">https://www.jianshu.com/p/68e6f82d88b7</a><br>Hexo博客中使用Latex<a href="https://blog.csdn.net/weixin_44191286/article/details/102702479" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44191286/article/details/102702479</a><br>markdownlint规则详细介绍及自定义参数设置<a href="https://www.jianshu.com/p/51523a1c6fe1" target="_blank" rel="noopener">https://www.jianshu.com/p/51523a1c6fe1</a></p>
 </blockquote>
-<h2 id="附语"><a href="#附语" class="headerlink" title="附语"></a>附语</h2><p>这是最后一次关于主题方面的大改动了。</p>
+<h2 id="附语"><a href="#附语" class="headerlink" title="附语"></a>附语</h2><p>在几天时间内主要是增加了版权、字数统计、阅读时间、百度统计以及阅读量的显示。由于本人并非从事web前端的工作，所以水平有限，同时本博客也主要以实用性为主，所以以后有时间只会增加评论区模块，不会进行大量的主题方面的修改。这一篇主要是介绍公式的使用，实际上在hexo中引入LaTex也是一件较为复杂的事情，目前的公式应该足够本人学术方面的使用。至于插入流程图和其他东西，以后有时间会在第一篇博客中更新。</p>
+<hr>
+<p>麦克斯韦方程组</p>
+<script type="math/tex; mode=display">
+\begin{array}{cc}
+\oint_l{H}dl=\int_s{J}ds+\int_s{\frac{\partial D}{\partial t}}ds\\
+\oint_s{E}dl=-\int_s{\frac{\partial B}{\partial t}}ds\\
+\oint_s{B}ds=0\\
+\oint_s{D}ds=\int_\nu{\rho}d\nu
+\end{array}</script><blockquote>
+<p>本文结束</p>
+</blockquote>
 
       
 
@@ -378,7 +482,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在hexo中使用LaTex"><span class="toc-number">1.</span> <span class="toc-text">1 在hexo中使用LaTex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-单行中使用"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 单行中使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附语"><span class="toc-number">2.</span> <span class="toc-text">附语</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-在hexo中使用LaTex"><span class="toc-number">1.</span> <span class="toc-text">1 在hexo中使用LaTex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-单行中使用"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 单行中使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-多行中使用"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 多行中使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-LaTeX内部换行"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 LaTeX内部换行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-LaTex公式与文本之间的间隔"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 LaTex公式与文本之间的间隔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-LaTex公式编号"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 LaTex公式编号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-常用的数学符号与公式"><span class="toc-number">2.</span> <span class="toc-text">2 常用的数学符号与公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#上下标"><span class="toc-number">2.1.</span> <span class="toc-text">上下标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方根"><span class="toc-number">2.2.</span> <span class="toc-text">方根</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上划线和下划线"><span class="toc-number">2.3.</span> <span class="toc-text">上划线和下划线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#向量的表示"><span class="toc-number">2.4.</span> <span class="toc-text">向量的表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分数"><span class="toc-number">2.5.</span> <span class="toc-text">分数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#积分"><span class="toc-number">2.6.</span> <span class="toc-text">积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#极限"><span class="toc-number">2.7.</span> <span class="toc-text">极限</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-符号表"><span class="toc-number">3.</span> <span class="toc-text">3 符号表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考内容和Hexo中添加LaTex链接"><span class="toc-number">4.</span> <span class="toc-text">参考内容和Hexo中添加LaTex链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附语"><span class="toc-number">5.</span> <span class="toc-text">附语</span></a></li></ol>
                     </div>
                 </span>
             </div>
